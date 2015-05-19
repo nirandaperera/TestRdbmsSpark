@@ -16,6 +16,7 @@ public class TestRdbmsSpark {
         String sparkHome = "/home/niranda/software/spark-1.3.0-bin-hadoop1";
         System.setProperty("wso2_custom_conf_dir", sparkHome + File.separator + "conf");
         SparkConf conf = new SparkConf().setMaster("local").setAppName("SparkSQL rdbms test");
+//        SparkConf conf = new SparkConf().setMaster("spark://niranda-wso2:7077").setAppName("SparkSQL rdbms test");
 
         JavaSparkContext ctx = new JavaSparkContext(conf);
         addJars(new File(sparkHome + File.separator + "analytics"), ctx);
